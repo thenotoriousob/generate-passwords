@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Inter;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+button {
+    background: #10B981;
+    width: 200px;
+    padding: 15px 10px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    border: 0;
+    border-radius: 5px;
+}
+
+h1 {
+    font-family: Karla;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* So the input displays on a new line */
+label {
+    display: block;
+}
+
+input {
+    display: block;
+    width: 70px;
+    border: 0;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 14px 15px;
+}
+
+span {
+    color: #10B981;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.container {
+    width: 550px;
+    height: 550px;
+    background: #1F2937;
+    padding: 100px 50px 50px 50px;
+}
+
+.passwords {
+    border-top: 1px solid #2F3E53;
+    margin-top: 35px;
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.passwords div {
+    background: #273549;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: #10B981;
+    text-align: center;
+    /* Not sure if this is the best way to keep the divs the same height when there is no text */
+    height: 25px;
+}
+
+.passwords div:hover {
+    cursor: pointer;
+}
+
+.copy-text {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.error {
+    margin-top: 5px;
+    color: red;
+    font-size: 16px;
+}
