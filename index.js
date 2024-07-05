@@ -3,19 +3,19 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 const password1El = document.getElementById("password1");
 const password2El = document.getElementById("password2");
 const errorEl = document.getElementById("error");
+const passwordBtnEl = document.getElementById("password-btn");
 
 let passwordLength = 0;
 
-document.getElementById("password-btn").addEventListener("click", generatePasswords);
-document.getElementById("password1").addEventListener("click", function() {copyToClipboard(document.getElementById("password1").textContent)});
-document.getElementById("password2").addEventListener("click", function() {copyToClipboard(document.getElementById("password2").textContent)});
+passwordBtnEl.addEventListener("click", generatePasswords);
+password1El.addEventListener("click", function() {copyToClipboard(password1El.textContent)});
+password2El.addEventListener("click", function() {copyToClipboard(password2El.textContent)});
 
 function generatePasswords() {
 
-    passwordLength = document.getElementById("password-length").value;
+    passwordLength = Number(document.getElementById("password-length").value);
 
-    // The === meant that it wasn't getting into this error
-    if (passwordLength == 0) {
+    if (passwordLength === 0) {
         errorEl.textContent = "Password length cannot be zero";
         return;
     } else if (passwordLength > 15) {
@@ -25,11 +25,8 @@ function generatePasswords() {
         errorEl.textContent = "";
     }
 
-    let password1 = generatePassword();
-    let password2 = generatePassword();
-
-    password1El.textContent = password1;
-    password2El.textContent = password2;
+    password1El.textContent = generatePassword();
+    password2El.textContent = generatePassword();
 
 }
 
